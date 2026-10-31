@@ -442,7 +442,7 @@ std::vector<Vehicle_t> get_vehicles(const std::string &sql, bool with_id) {
         info[2].strict = false;
         info[3].strict = false;
         /* start nodes are compulsory*/
-        info[14].strict = false;
+        info[14].strict = true;
     }
 
     return get_data<Vehicle_t>(sql, with_id, info, &fetch_vehicle);
